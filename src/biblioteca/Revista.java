@@ -26,22 +26,10 @@ public class Revista extends MaterialBiblioteca implements Prestamo{
 	}
 	
 	@Override
-<<<<<<< HEAD
 	public void prestar(String nombreUsuario) {
 		this.isPrestado = true;
 		this.nombreUsuario = nombreUsuario;
 }
-=======
-	public boolean prestar(String nombreUsuario) {
-		if(this.isPrestado = true) {
-			return false;
-		}else {
-			this.isPrestado = true;
-			this.nombreUsuario = nombreUsuario;
-			return true;
-		}
-	}
->>>>>>> 60301be48b394d95358a929531d2f5acc138aa4e
 	
 	@Override
 	public void devolver() {
