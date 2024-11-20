@@ -32,7 +32,6 @@ public class Biblioteca {
 				if (materialBiblioteca instanceof Libro) {
 					Libro libro = (Libro) materialBiblioteca;
 					if(libro.isPrestado() == false) {
-<<<<<<< HEAD
 							libro.prestar(nombreUsuario);
 							return true;
 						}else {
@@ -45,24 +44,6 @@ public class Biblioteca {
 						return true;
 					}else {
 						return false;
-=======
-						if(libro.prestar(nombreUsuario) == false){
-							return false;
-						}else {
-							return true;
-						}
-					}
-				}else if(materialBiblioteca instanceof Libro) {
-					Revista revista = (Revista) materialBiblioteca;
-					if(revista.isPrestado() == false) {
-						if(revista.isPrestado() == false) {
-							if(revista.prestar(nombreUsuario) == false){
-								return false;
-							}else {
-								return true;
-							}
-						}					
->>>>>>> 60301be48b394d95358a929531d2f5acc138aa4e
 					}
 				}
 			}
@@ -88,14 +69,6 @@ public class Biblioteca {
 		return mensaje;
 	}
 	
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
 
 	public String getNombre() {
 		return nombre;
