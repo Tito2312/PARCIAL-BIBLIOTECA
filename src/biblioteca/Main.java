@@ -5,11 +5,7 @@ import javax.swing.JOptionPane;
 public class Main {
 
 	public static Biblioteca bibli = new Biblioteca("Biblioteca de tito y lucho");
-<<<<<<< HEAD
 	public static void main(String[] args) {
-=======
-	public static void Main(String[] args) {
->>>>>>> 60301be48b394d95358a929531d2f5acc138aa4e
 		
 		int opcion = 0;
 		String menu = menu();
@@ -35,11 +31,7 @@ public class Main {
 		switch (menu) {
 		case 1:
 			subMenu += "1. Agregar libro.\n"
-<<<<<<< HEAD
 					+ "2. Agregar Revista.\n"
-=======
-					+ "2. Agregar libro.\n"
->>>>>>> 60301be48b394d95358a929531d2f5acc138aa4e
 					+ "3. Prestar materiales.\n"
 					+ "4. Devolver materiales.\n"
 					+ "5. Salir.";
@@ -99,15 +91,9 @@ public class Main {
 		int numeroPaginas = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de paginas de la revista"));
 		String numeroEdicion = JOptionPane.showInputDialog("Ingrese el numero de edicion de la revista");
 		
-<<<<<<< HEAD
 		Revista revista = new Revista(titulo, añoPublicacion, numeroPaginas, numeroEdicion);
 		
 		bibli.agregarRevistas(revista);
-=======
-		Libro libro = new Libro(titulo, añoPublicacion, numeroPaginas, numeroEdicion);
-		
-		bibli.agregarLibros(libro);
->>>>>>> 60301be48b394d95358a929531d2f5acc138aa4e
 	}
 	
 	public static void prestar() {
@@ -117,27 +103,16 @@ public class Main {
 		if(bibli.prestarMaterial(titulo, usuario) == true) {
 			JOptionPane.showMessageDialog(null, "Se presta el material con titulo: " + titulo);
 		}else {
-<<<<<<< HEAD
 			JOptionPane.showMessageDialog(null, "El material no se encuentra disponible");
-=======
-			JOptionPane.showMessageDialog(null, "El material ya se encuentra prestado");
->>>>>>> 60301be48b394d95358a929531d2f5acc138aa4e
 		}
 	}
 	
 	public static void devolver() {
-<<<<<<< HEAD
 		String titulo = JOptionPane.showInputDialog("Ingrese el titulo del material a devolver");
 		int diasRetraso = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de dias de retraso en la devolucion"));
 		
 		JOptionPane.showMessageDialog(null, bibli.devolverMaterial(titulo, diasRetraso));
 		
 		
-=======
-		String titulo = JOptionPane.showInputDialog("Ingrese el titulo del material a prestar");
-		int diasRetraso = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de dias de retraso en la devolucion"));
-		
-		bibli.devolverMaterial(titulo, diasRetraso);
->>>>>>> 60301be48b394d95358a929531d2f5acc138aa4e
 	}
 }
